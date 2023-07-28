@@ -1,13 +1,14 @@
 # BanglaPerser
-Parse token from bangla text
+Parse token from Bangla text. Work on both NFC and NFD normalized text
 
-Input words and it's parsed token
+Input words and their parsed token
 ```
-হ্যান্ডব্যাগেই    => ['হ্য', 'া', 'ন্ড', 'ব্য', 'া', 'গ', 'ে', 'ই']
+Input word   | Output Tokens
+হ্যান্ডব্যাগেই     => ['হ্য', 'া', 'ন্ড', 'ব্য', 'া', 'গ', 'ে', 'ই']
 বিশ্ববিদ্যালয়গুলো => ['বি', 'শ্ব', 'বি', 'দ্য', 'া', 'ল', 'য়', 'গু', 'লো']
 ইন্টেলিজেন্সের   => ['ই', 'ন্ট', 'ে', 'লি', 'জ', 'ে', 'ন্স', 'ে', 'র']
 হিষ্টিরিয়াগ্রস্তের   => ['হি', 'ষ্টি', 'রি', 'য়', 'া', 'গ্র', 'স্ত', 'ে', 'র']
-মুক্তিযুদ্ধের     => ['মু', 'ক্তি', 'যু', 'দ্ধ', 'ে', 'র']
+মুক্তিযুদ্ধের      => ['মু', 'ক্তি', 'যু', 'দ্ধ', 'ে', 'র']
 ```
 ## Project structure
 ```sh
@@ -32,7 +33,7 @@ Input words and it's parsed token
 corpus_path = 'corpus/BengaliWordList_439.txt'
 go(corpus_path)
 
-# now you can run
+# Now you can run
 python perse_tokens.py
 ```
 It will generate the following files
